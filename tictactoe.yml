@@ -1,0 +1,73 @@
+# Maintained by Vivek Nair (VN)
+name: Tic-Tac-Toe
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+# One game at a time per issue: queue moves, never cancel a running one.
+concurrency:
+  group: tictactoe-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, '🎮 Tic-Tac-Toe')
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Extract move from comment
+        id: move
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          MOVE="$(printf '%s' "$COMMENT_BODY" | head -n 1 | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]' | cut -c1-20)"
+          echo "move=$MOVE" >> "$GITHUB_OUTPUT"
+
+      - name: Play the move
+        run: python3 tictactoe/play.py "${{ steps.move.outputs.move }}"
+
+      - name: Commit game state
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add tictactoe/state.json tictactoe/board.svg tictactoe/result.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Tic-tac-toe: ${{ steps.move.outputs.move }}"
+            git push
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          else
+            echo "sha=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Reply with the updated board
+        uses: actions/github-script@v7
+        env:
+          BOARD_SHA: ${{ steps.commit.outputs.sha }}
+        with:
+          script: |
+            const fs = require('fs');
+            const result = JSON.parse(fs.readFileSync('tictactoe/result.json', 'utf8'));
+            const sha = process.env.BOARD_SHA || context.sha;
+            const body =
+              `${result.summary}\n\n` +
+              `![tic-tac-toe board](https://raw.githubusercontent.com/vivekn4/vivekn4/main/tictactoe/board.svg?v=${sha})\n\n` +
+              `_You're X — comment a cell like \`B2\` to play. Comment \`new\` for a new game._`;
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: context.issue.number,
+              body,
+            });
