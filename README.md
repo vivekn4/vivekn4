@@ -1,11 +1,11 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Vivek%20Nair&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=CS%20Grad%20%C2%B7%20Game%20Designer%20%C2%B7%20AI%20App%20Builder&descAlignY=62&descSize=20" alt="Vivek Nair — waving header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Trigger%20Fingers&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=aka%20Smokey%20%C2%B7%20CS%20Grad%20%C2%B7%20Game%20Designer%20%C2%B7%20AI%20App%20Builder&descAlignY=62&descSize=20" alt="Trigger Fingers — waving header" />
 
 ![Profile banner](assets/banner.jpg)
 
 ![Made by VN](https://img.shields.io/badge/made%20by-VN-blue)
 ![Profile views](https://komarev.com/ghpvc/?username=vivekn4&color=58A6FF&style=flat-square)
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=Hi+there%2C+I%27m+Vivek+Nair+%F0%9F%91%8B;CS+Grad+%7C+Game+Design+Student;I+build+games%2C+AI+apps+%26+cool+web+stuff;Maximalist+by+default+%F0%9F%9A%80)](https://github.com/vivekn4)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1200&color=58A6FF&center=true&vCenter=true&width=700&lines=Hi+there%2C+I%27m+Trigger+Fingers+%F0%9F%91%8B;CS+Grad+%7C+Game+Design+Student;I+build+games%2C+AI+apps+%26+cool+web+stuff;Maximalist+by+default+%F0%9F%9A%80)](https://github.com/vivekn4)
 
 ## 🙋 About me
 
@@ -42,7 +42,7 @@
 
 ## 📊 GitHub stats
 
-![Vivek's GitHub stats](https://github-readme-stats.vercel.app/api?username=vivekn4&show_icons=true&theme=tokyonight&hide_border=true)
+![Trigger Fingers' GitHub stats](https://github-readme-stats.vercel.app/api?username=vivekn4&show_icons=true&theme=tokyonight&hide_border=true)
 ![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=vivekn4&layout=compact&theme=tokyonight&hide_border=true)
 
 ![GitHub streak](https://streak-stats.demolab.com?user=vivekn4&theme=tokyonight&hide_border=true)
