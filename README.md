@@ -47,7 +47,7 @@
 
 ![GitHub streak](https://streak-stats.demolab.com?user=vivekn4&theme=tokyonight&hide_border=true)
 
-[![Vivek's activity graph](https://github-readme-activity-graph.vercel.app/graph?username=vivekn4&theme=tokyo-night&hide_border=true)](https://github.com/vivekn4)
+[![Trigger Fingers' activity graph](https://github-readme-activity-graph.vercel.app/graph?username=vivekn4&theme=tokyo-night&hide_border=true)](https://github.com/vivekn4)
 
 ## 🏆 Trophies
 
@@ -80,7 +80,7 @@ Columns are A–C, rows are 1–3. A GitHub Action processes your move and repli
 
 ---
 
-**Crafted by [Vivek Nair](https://github.com/vivekn4) · VN**
+**Crafted by Trigger Fingers aka Smokey · VN**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=140&section=footer" alt="waving footer" />
 
